@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Myungkou Shin Ph.D. Candidate in Kenneth C. Griffin Department of Economics at the University of Chicago" />
+  <meta name="description" content="Myungkou Shin" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -12,12 +12,18 @@
 
   <style> 
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-    a { color: #363C3F; text-decoration: none; }
-    a:link { color: #363C3F; font-size: 18px; text-decoration: none; }
-    a:visited { color: #363C3F; text-decoration: none; }
-    a:hover { color: #884548; text-decoration: underline; }
-    a:active { color: #363C3F; text-decoration: none; }
- 
+    #container a { color: #363C3F; text-decoration: none; }
+    #container a:link { color: #363C3F; font-size: 18px; text-decoration: none; }
+    #container a:visited { color: #363C3F; text-decoration: none; }
+    #container a:hover { color: #884548; text-decoration: none; }
+    #container a:active { color: #363C3F; text-decoration: none; }
+    
+    #research a { color: #001987; font-size: 14px; text-decoration: none; }
+    #research a:link { color: #001987; font-size: 14px; text-decoration: none; }
+    #research a:visited { color: #001987; text-decoration: none; }
+    #research a:hover { color: #555; text-decoration: none; }
+    #research a:active { color: #001987; text-decoration: none; }
+    
     div.content {
         margin-left: 0px;
         padding: 1px 16px;
@@ -107,25 +113,42 @@
         margin-top: 10px; 
         margin-bottom: 10px;
         width:100%;
-        font-family:'Roboto Slab', serif;;
+        font-family:'Roboto Slab', serif;
         font-weight:lighter;
         font-size:18px;
+    }
+    .collapsible {
+      color: #000d44;
+      font-family:'Roboto Slab', serif;
+      background-color: white;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      padding: 0px;
+      width: 0px;
+      text-align: left;
+    }
+    .active, .collapsible:hover {
+      color: #000d44;
+    }
+    .content {
+      padding: 10px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
     }
   </style>
 </head>
 
 <body leftmargin="20" topmargin="20">
-
-    
     <div id="header">
         <br>
     </div>
-
+    
     <div id="container">
-
         <p id = "myNav" style="line-height: 1">
             <br><br>
-            <b>
             <span style="font-size:32px; font-family:'Roboto Slab', serif;">M<span style="font-size:25px; font-family:'Roboto Slab', serif;">YUNGKOU</span> <span style="font-size:32px; font-family:'Roboto Slab', serif;">S</span><span style="font-size:25px; font-family:'Roboto Slab', serif;">HIN</span> <br>
             <span style="font-size:12px;"> &nbsp
                 <a href="https://myungkoushin.com" style="font-size:12px;">HOME</a> &nbsp | &nbsp 
@@ -133,32 +156,40 @@
                 <a href="https://myungkoushin.com/cv/MShin_cv.pdf" style="font-size:12px;">CV</a>
                 <br><br>
             </span>
-            </b>
         </p>
 
-        <div id="research"> 
-
-            <b><p style="text-align:center;"><span style="font-size:25px">R</span><span style="font-size:20px">ESEARCH</span></p></b>
-            
-            <br>
-
-            <b><p><span style="font-size:15px; color:#3a49b0">W</span><span style="font-size:12px; color:#3a49b0">ORKING</span> <span style="font-size:15px; color:#3a49b0">P</span><span style="font-size:12px; color:#3a49b0">APERS</span></p> </b>
-            <b><p> "<a href="https://www.myungkoushin.com/research/MShin_jmp.pdf"><ins>Clustered Treatment in Multilevel Models.</ins></a>" </p></b>
-
-
-            <p> <span style="font-size:14px;"> I develop a multilevel model for empirical contexts where each individual belongs to a cluster and a treatment is endogenously assigned at the cluster level. When treatment assignment is clustered, the treatment effect cannot be identified in a model with fully flexible cluster heterogeneity. To put restrictions on cluster heterogeneity, I assume that potential outcomes are independent of the treatment, conditioning on two sets of variables: cluster-level characteristics, and the distribution of individual-level characteristics for each cluster. With this selection-on-distribution framework, I control for treatment endogeneity and show how to recover treatment effect heterogeneity in both individual-level and cluster-level variables. To implement this idea, I propose a two-step estimation procedure based on a <em>K</em>-means algorithm. In the first step, I group clusters in terms of their distributions of individual-level characteristics. In the second step, I use the grouping structure to estimate the treatment effect. To illustrate the method, I study the disemployment effect of a raise in the minimum wage level on teenagers. </span></p>
-            
+        <div id="research">
+            <p style="text-align:center;"><span style="font-size:25px">R</span><span style="font-size:20px">ESEARCH</span></p>
             <br>
             
-            <b><p> "<a href="https://www.myungkoushin.com/research/MShin_wp.pdf"><ins>Finitely Heterogeneous Treatment Effect in Event-study.</ins></a>" <span style="font-size:14px;"></span></p></b>
-            <p> <span style="font-size:14px;"> Treatment effect estimation strategies in the event-study setup, namely panel data with variation in treatment timing, often use the parallel trend assumption that assumes mean independence across different treatment timings. In this paper, I relax the parallel trend assumption by including a latent type variable and develop a conditional two-way fixed-effects model. With a finite support assumption on the latent type variable, I show that an extremum classifier consistently estimates the type assignment. Then I solve the endogeneity problem of the selection into treatment by conditioning on the latent type, through which the treatment timing is correlated with the outcome. I also allow treatment to affect units of different types differently and thus directly model and estimate type-level heterogeneity in treatment effect. </span></p>
+            <p><span style="font-size:15px; color:#3a49b0">W</span><span style="font-size:12px; color:#3a49b0">ORKING</span> <span style="font-size:15px; color:#3a49b0">P</span><span style="font-size:12px; color:#3a49b0">APERS</span></p>
             
+            <p> Clustered Treatment in Multilevel Models </p>
+            <a style="font-size:14px; color:#000d44; font-weight:lighter; font-family:'Roboto Slab', serif" href="https://www.myungkoushin.com/research/MShin_jmp.pdf"> pdf </a> &nbsp <button type="button" class="collapsible">abstract</button>
+              <div class="content">
+                <p> <span style="font-size:14px"> I develop a multilevel model for empirical contexts where each individual belongs to a cluster and a treatment is endogenously assigned at the cluster level. When treatment assignment is clustered, the treatment effect cannot be identified in a model with fully flexible cluster heterogeneity. To put restrictions on cluster heterogeneity, I assume that potential outcomes are independent of the treatment, conditioning on two sets of variables: cluster-level characteristics, and the distribution of individual-level characteristics for each cluster. With this selection-on-distribution framework, I control for treatment endogeneity and show how to recover treatment effect heterogeneity in both individual-level and cluster-level variables. To implement this idea, I propose a two-step estimation procedure based on a <em>K</em>-means algorithm. In the first step, I group clusters in terms of their distributions of individual-level characteristics. In the second step, I use the grouping structure to estimate the treatment effect. To illustrate the method, I study the disemployment effect of a raise in the minimum wage level on teenagers. </span> </p>
+              </div> 
+            
+            <hr>
+            
+            <p> Finitely Heterogeneous Treatment Effect in Event-study </a> <span style="font-size:14px; color:#000d44"> <br> (revision requested at the Review of Economics and Statistics) </span></p>
+             <a style="font-size:14px; color:#000d44; font-weight:lighter; font-family:'Roboto Slab', serif" href="https://www.myungkoushin.com/research/MShin_wp.pdf"> pdf </a> &nbsp <button type="button" class="collapsible">abstract</button>
+              <div class="content">
+                <p> <span style="font-size:14px"> Treatment effect estimation strategies in the event-study setup, namely panel data with variation in treatment timing, often use the parallel trend assumption that assumes mean independence across different treatment timings. In this paper, I relax the parallel trend assumption by including a latent type variable and develop a conditional two-way fixed-effects model. With a finite support assumption on the latent type variable, I show that an extremum classifier consistently estimates the type assignment. Then I solve the endogeneity problem of the selection into treatment by conditioning on the latent type, through which the treatment timing is correlated with the outcome. I also allow treatment to affect units of different types differently and thus directly model and estimate type-level heterogeneity in treatment effect.  </span> </p>
+              </div> 
+            <br>
             <br>
             
-            <b><p><span style="font-size:15px;color:#3a49b0">W</span><span style="font-size:12px;color:#3a49b0">ORK IN</span> <span style="font-size:15px;color:#3a49b0">P</span><span style="font-size:12px;color:#3a49b0">ROGRESS</span></p></b> 
-            <b><p> "Clustering Sensitivity with Weakly Dependent Data" </p></b> 
-            <p> <span style="font-size:14px;"> The use of clustered standard errors can be justified with a weak dependence assumption: given a metric of distance between units of observations, such as geographical distance, dependence between two units fades away as the distance grows. Under the weak dependence structure, any clustering structure is valid for inference as along as it clusters observations in a way that the distance between units from different clusters is large. This paper shows that there is large variation in the inference result based on the choice of the clustering structure and suggests a simple remedy to summarize multiple inference results based on multiple clustering structures. </span></p>
-
+            
+            <p><span style="font-size:15px;color:#3a49b0">W</span><span style="font-size:12px;color:#3a49b0">ORK IN</span> <span style="font-size:15px;color:#3a49b0">P</span><span style="font-size:12px;color:#3a49b0">ROGRESS</span></p>
+            <p> Clustering Sensitivity with Weakly Dependent Data </p>
+            <button type="button" class="collapsible">abstract</button>
+              <div class="content">
+                <p> <span style="font-size:14px"> The use of clustered standard errors can be justified with a weak dependence assumption: given a metric of distance between units of observations, such as geographical distance, dependence between two units fades away as the distance grows. Under the weak dependence structure, any clustering structure is valid for inference as along as it clusters observations in a way that the distance between units from different clusters is large. This paper shows that there is large variation in the inference result based on the choice of the clustering structure and suggests a simple remedy to summarize multiple inference results based on multiple clustering structures. </span> </p>
+              </div> 
+            <br>
+            <br>
+          
         </div>
 
     </div>
@@ -170,6 +201,20 @@
         
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+          content.style.display = "block";
+          }
+        });
         }
     </script>
 </body>
