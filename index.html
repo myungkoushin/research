@@ -29,15 +29,15 @@
         padding: 1px 16px;
         height: auto;
     }
-    .active { background-color: #ffffff; }
+    .active { background-color: #fbfcff; }
     .main { 
         margin-top: 0px; 
-        background-color: #ffffff;
+        background-color: #fbfcff;
         }
     body{ 
         padding-top: 0px;
         top:0;
-        background-color: #ffffff;
+        background-color: #fbfcff;
         }
     #header{
         position:fixed;
@@ -45,19 +45,19 @@
         top:0;
         left:0;
         width:100%;
-        background-color: #ffffff;
+        background-color: #fbfcff;
     }
     #container {
         width: 960px;
         margin: 0px auto;
         padding: 0px;
         top:0;
-        background-color: #ffffff;
+        background-color: #fbfcff;
         transition: margin-left 0.5s;
     }
     #myNav {
         position:fixed;
-        background-color: #ffffff;
+        background-color: #fbfcff;
         width:100%;
         top:0;
     }
@@ -66,7 +66,7 @@
         margin-top:125px;
         padding-left: 0px;
         float: left;
-        background-color:#ffffff;
+        background-color:#fbfcff;
     }
     #pic {
         width:250px;
@@ -74,21 +74,21 @@
         padding-left: 0px;
         padding-right: 50px;
         float:left;
-        background-color: #ffffff;
+        background-color: #fbfcff;
     }
     #research {
         margin-top:125px;
         width:100%;
         clear: both;
         padding: 15px;
-        background-color: #ffffff;
+        background-color: #fbfcff;
     }
     #teaching {
         margin-top:125px;
         width:100%;
         clear: both;
         padding: 15px;
-        background-color: #ffffff;
+        background-color: #fbfcff;
     }
     @media screen and ( max-width: 980px ) {
         #container {
@@ -110,8 +110,8 @@
     p {
         color:#363C3F;
         line-height:1.5; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
+        margin-top: 15px; 
+        margin-bottom: 5px;
         width:100%;
         font-family:'Lato', serif;
         font-weight:lighter;
@@ -138,7 +138,39 @@
       overflow: hidden;
       background-color: #f1f1f1;
     }
-  </style>
+    .description {
+        font-size:14px; 
+        color:#3a3a3a; 
+        font-weight:lighter; 
+        font-family:'Lato';
+        margin-top: 0px; 
+        margin-bottom: 0px;
+    }
+
+    ol {
+       list-style-type: decimal;
+       font-size:17px; 
+       color:#3a3a3a; 
+       font-weight:lighter; 
+       font-family:'Lato';
+       padding-left:20px;
+       counter-reset: list;
+    }
+    li {
+        list-style: none;
+        position: relative;
+    }
+    li:before {
+        content: "[" counter(list) "]";
+        counter-increment: list;
+        left: -40px;
+        padding-right: 10px;
+        padding-top: 3px;
+        position: absolute;
+        text-align: right;
+        width: 30px;
+    }
+    </style>
 </head>
 
 <body leftmargin="20" topmargin="20">
@@ -163,29 +195,33 @@
             <br>
             
             <p><span style="font-size:15px; color:#3a49b0">W</span><span style="font-size:12px; color:#3a49b0">ORKING</span> <span style="font-size:15px; color:#3a49b0">P</span><span style="font-size:12px; color:#3a49b0">APERS</span></p>
-
-            <p> <span style="font-size:16px">[1]</span> Finitely Heterogeneous Treatment Effect in Event-study <br> 
-                &nbsp &nbsp &nbsp <span style="font-size:14px; color:#3a3a3a"> (resubmitted to the </span> 
-                <span style="font-size:14px; font-style:italic; color:#3a3a3a">Review of Economics and Statistics, </span> 
-                <span style="font-size:14px; color:#3a3a3a"> Sep 2024) </span> &nbsp
-                <a style="font-size:14px; color:#3a3a3a; font-weight:lighter; font-family:'Lato', serif" href="https://www.myungkoushin.com/research/hteev.pdf"> [draft] </a> &nbsp 
-                <a style="font-size:14px; color:#3a3a3a; font-weight:lighter; font-family:'Lato', serif" href="https://www.myungkoushin.com/research/hteev_sm.pdf"> [appendix] </a> 
-            </p> 
-
             
-            <p> <span style="font-size:16px">[2]</span> Aggregating Individual-level Information in Large Clusters <br> 
-                &nbsp &nbsp &nbsp <span style="font-size:14px; color:#3a3a3a"> (previously circulated as "Clustered Treatment in Multilevel Models", </span> 
-                <span style="font-size:14px; font-style:italic; color:#3a3a3a"></span> 
-                <span style="font-size:14px; color:#3a3a3a"> Sep 2024) </span> &nbsp
-                <a style="font-size:14px; color:#3a3a3a; font-weight:lighter; font-family:'Lato', serif" href="https://www.myungkoushin.com/research/ctmm.pdf"> [draft] </a> 
-            </p> 
+            <ol>
+                <li><p>Identification of a Rank-dependent Peer Effect Model</p>
+                    <p class="description"> (with <a style="color:#3a49b0", href="https://www.eyoherstad.com">Eyo Herstad</a>, Oct 2024) &nbsp
+                        <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/irpem.pdf">[draft]</a>
+                    </p>
+                </li>
 
-            <p> <span style="font-size:16px">[3]</span> Distributional Treatment Effect with Latent Rank Invariance <br> 
-                &nbsp &nbsp &nbsp <span style="font-size:15px; color:#3a3a3a"></span> 
-                <span style="font-size:14px; font-style:italic; color:#3a3a3a"></span> 
-                <span style="font-size:14px; color:#3a3a3a">(Jun 2024) </span> &nbsp
-                <a style="font-size:14px; color:#3a3a3a; font-weight:lighter; font-family:'Lato', serif" href="https://www.myungkoushin.com/research/dtelri.pdf"> [draft] </a> 
-            </p> 
+                <li><p>Aggregating Individual-level Information in Large Clusters</p>
+                    <p class="description"> (previously circulated as "Clustered Treatment in Multilevel Models", Sep 2024) &nbsp
+                        <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/ctmm.pdf">[draft]</a>  
+                    </p>
+                </li>
+
+                <li><p>Finitely Heterogeneous Treatment Effect in Event-study</p>
+                    <p class="description"> (resubmitted to the <span style="font-style:italic">Review of Economics and Statistics</span>, Sep 2024) &nbsp
+                        <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/hteev.pdf">[draft]</a> &nbsp 
+                        <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/hteev_sm.pdf">[appendix]</a> 
+                    </p>
+                </li>
+
+                <li><p>Distributional Treatment Effect with Latent Rank Invariance</p>
+                    <p class="description"> (Jun 2024) &nbsp
+                        <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/dtelri.pdf">[draft]</a> 
+                    </p>
+                </li>
+            </ol>
           
         </div>
 
