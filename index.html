@@ -153,37 +153,29 @@
     font-weight: 500;
     }
 
-    ol {
-    list-style: none;          /* remove default numbers */
-    counter-reset: list;        /* initialize counter to 0 by default */
-    font-size: 17px; 
-    color: #3a3a3a; 
-    font-weight: lighter; 
-    font-family: 'Lato';
-    padding-left: 50px;        /* space for numbers */
+    ol.custom-counter {
+    list-style: none;           /* remove default numbering */
+    counter-reset: item;         /* initialize counter */
+    padding-left: 40px;          /* space for numbers */
 }
 
-/* Each list item increments the counter */
-ol li {
+ol.custom-counter li {
     position: relative;
-    counter-increment: list;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.5em;
 }
 
-/* Display the number in your style */
-ol li::before {
-    content: "[" counter(list) "]";
+/* Display numbers in [number] format */
+ol.custom-counter li::before {
+    content: "[" counter(item) "] ";
+    counter-increment: item;
     position: absolute;
-    left: -50px;
-    width: 40px;
+    left: -40px;
+    width: 30px;
     text-align: right;
     color: #3a49b0;
+    font-weight: normal;
 }
 
-/* Special handling for ol with a start attribute */
-ol[start] {
-    counter-reset: list calc(var(--start, 1) - 1);
-}
     </style>
 </head>
 
@@ -210,7 +202,7 @@ ol[start] {
             
             <p><span class="section-title">Working papers</span></p>
             
-            <ol>
+            <ol class="custom-counter">
                 <li><p>Distributional treatment effect with latent rank invariance 
                         <span style="font-size:15px;">(Oct 2025) &nbsp;
                         <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/dtelri.pdf">[draft]</a> 
@@ -239,7 +231,7 @@ ol[start] {
           <br>
 
             <p><span class="section-title">Publications and forthcoming papers</span><span style="font-size:12px; color:#3a49b0"></p>
-            <ol start="4" style="--start: 4;">
+            <ol start="4" class="custom-counter">
                 <li><p>Finitely heterogeneous treatment effect in event-study
                         <span style="font-size:15px;"> &nbsp;
                         <a style="color:#3a49b0" href="https://doi.org/10.1162/rest_a_01553">[link]</a> &nbsp; </span>
@@ -279,6 +271,7 @@ ol[start] {
     </script>
 </body>
 </html>
+
 
 
 
