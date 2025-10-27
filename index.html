@@ -161,6 +161,11 @@
        font-family:'Lato';
        padding-left:20px;
     }
+    
+  ol[start] {
+      /* initialize counter based on start attribute */
+      counter-reset: list calc(attr(start number, 1) - 1);
+  }
     ol li {
         list-style: none;
         position: relative;
@@ -270,6 +275,7 @@
     </script>
 </body>
 </html>
+
 
 
 
