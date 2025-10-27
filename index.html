@@ -147,35 +147,29 @@
         margin-bottom: 20px;
     }
 
-    .section-title {
-    font-size: 19px;
-    color: #3a49b0;
-    font-weight: 500;
+    ol {
+       list-style-type: decimal;
+       font-size:17px; 
+       color:#3a3a3a; 
+       font-weight:lighter; 
+       font-family:'Lato';
+       padding-left:20px;
+       counter-reset: list;
     }
-
-    ol.custom-counter {
-    list-style: none;           /* remove default numbering */
-    counter-reset: item;         /* initialize counter */
-    padding-left: 40px;          /* space for numbers */
-}
-
-ol.custom-counter li {
-    position: relative;
-    margin-bottom: 0.5em;
-}
-
-/* Display numbers in [number] format */
-ol.custom-counter li::before {
-    content: "[" counter(item) "] ";
-    counter-increment: item;
-    position: absolute;
-    left: -40px;
-    width: 30px;
-    text-align: right;
-    color: #3a49b0;
-    font-weight: normal;
-}
-
+    li {
+        list-style: none;
+        position: relative;
+    }
+    li:before {
+        content: "[" counter(list) "]";
+        counter-increment: list;
+        left: -40px;
+        padding-right: 10px;
+        padding-top: 3px;
+        position: absolute;
+        text-align: right;
+        width: 30px;
+    }
     </style>
 </head>
 
@@ -198,11 +192,11 @@ ol.custom-counter li::before {
 
         <div id="research">
             <p style="text-align:center;"><span style="font-size:25px">Research</span></p>
-            <br> 
+            <br>
             
-            <p><span class="section-title">Working papers</span></p>
+            <p><span style="font-size:19px; color:#3a49b0">Working papers</span></p>
             
-            <ol class="custom-counter">
+            <ol>
                 <li><p>Distributional treatment effect with latent rank invariance 
                         <span style="font-size:15px;">(Oct 2025) &nbsp;
                         <a style="color:#3a49b0" href="https://www.myungkoushin.com/research/dtelri.pdf">[draft]</a> 
@@ -228,10 +222,12 @@ ol.custom-counter li::before {
                     </p>
                 </li>
             </ol>
-          <br>
 
-            <p><span class="section-title">Publications and forthcoming papers</span><span style="font-size:12px; color:#3a49b0"></p>
-            <ol start="4" class="custom-counter">
+            <br> 
+
+            <p><span style="font-size:19px; color:#3a49b0">Publications and forthcoming papers</span><span style="font-size:12px; color:#3a49b0"></p>
+            
+            <ol>
                 <li><p>Finitely heterogeneous treatment effect in event-study
                         <span style="font-size:15px;"> &nbsp;
                         <a style="color:#3a49b0" href="https://doi.org/10.1162/rest_a_01553">[link]</a> &nbsp; </span>
@@ -271,14 +267,3 @@ ol.custom-counter li::before {
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
