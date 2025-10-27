@@ -154,32 +154,36 @@
     }
 
     ol {
-       list-style-type: decimal;
-       font-size:17px; 
-       color:#3a3a3a; 
-       font-weight:lighter; 
-       font-family:'Lato';
-       padding-left:20px;
-    }
-    
-  ol[start] {
-      /* initialize counter based on start attribute */
-      counter-reset: list calc(attr(start number, 1) - 1);
-  }
-    ol li {
-        list-style: none;
-        position: relative;
-    }
-    ol li:before {
-        content: "[" counter(list) "]";
-        counter-increment: list;
-        left: -40px;
-        padding-right: 10px;
-        padding-top: 3px;
-        position: absolute;
-        text-align: right;
-        width: 30px;
-    }
+    list-style: none;          /* remove default numbers */
+    counter-reset: list;        /* initialize counter to 0 by default */
+    font-size: 17px; 
+    color: #3a3a3a; 
+    font-weight: lighter; 
+    font-family: 'Lato';
+    padding-left: 50px;        /* space for numbers */
+}
+
+/* Each list item increments the counter */
+ol li {
+    position: relative;
+    counter-increment: list;
+    margin-bottom: 0.6em;
+}
+
+/* Display the number in your style */
+ol li::before {
+    content: "[" counter(list) "]";
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    text-align: right;
+    color: #3a49b0;
+}
+
+/* Special handling for ol with a start attribute */
+ol[start] {
+    counter-reset: list calc(var(--start, 1) - 1);
+}
     </style>
 </head>
 
@@ -235,7 +239,7 @@
           <br>
 
             <p><span class="section-title">Publications and forthcoming papers</span><span style="font-size:12px; color:#3a49b0"></p>
-            <ol start="4">
+            <ol start="4" style="--start: 4;">
                 <li><p>Finitely heterogeneous treatment effect in event-study
                         <span style="font-size:15px;"> &nbsp;
                         <a style="color:#3a49b0" href="https://doi.org/10.1162/rest_a_01553">[link]</a> &nbsp; </span>
@@ -275,6 +279,7 @@
     </script>
 </body>
 </html>
+
 
 
 
